@@ -59,6 +59,21 @@ public class MatchingRule {
 		return null;
 	}
 	
+	public String getHistoryHandling()
+	{
+	    return this.OriginalRule.History;
+	}
+	
+	public Double getHistoryMinInterval()
+	{
+	    return this.OriginalRule.MinTimeInterval;
+	}
+	
+        public Double getHistoryMaxInterval()
+        {
+            return this.OriginalRule.MaxTimeInterval;
+        }
+	
 	private void parseRuleLHS(Rule rule) {
 		this.rule = rule;
 		String[] nodes = rule.LHS.split("/");
